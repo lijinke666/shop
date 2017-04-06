@@ -1,0 +1,13 @@
+{
+  "presets":[
+    "es2015",
+    "stage-1"
+  ],
+  "plugins":[
+      "transform-async-to-generator" ,    //支持async写法
+      "transform-runtime",
+      "transform-class-properties",
+      "transform-decorators-legacy",
+      "transform-runtime"
+  ]
+}

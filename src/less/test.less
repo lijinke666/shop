@@ -1,0 +1,14 @@
+@import "./mixin.less";
+@width:400px;
+@height:600px;
+.test{
+  text-align: center;
+  width:@width;
+  height:@height;
+  line-height: @height;
+  color:#444;
+  font-size:13px;
+  border:1px solid red;
+  .ellipsis-n(2);
+  display: flex;
+}

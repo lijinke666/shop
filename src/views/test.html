@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../build/css/style.min.css">
+</head>
+<body>
+  <div class="main"></div>
+</body>
+  <script type="text/template" id="template">
+    <div class="test">
+      <h3>谁是我儿子: <%= name %></h3>
+      <%   _.each(data,function(item){ %>
+        <p><%-  item.name %> ||  <%- item.sex %></p>
+      <% }); %>
+    </div>
+</script>
+<script src="../libs/jquery.min.js"></script>
+<script src="../libs/underscore-min.js"></script>
+<script src="../utils/helper.js"></script>
+<script src="../build/js/build.min.js"></script>
+<script>
+  $(function(){
+    $.get('../../mock/data.json',(res)=>{
+      console.log('data',res)
+     var tmp =  _.template($('#template').html())({
+        name:"王南平",
+        data:res
+      })
+
+      $('.main').html(tmp)
+    })
+  })
+</script>
+</html>
