@@ -98,7 +98,15 @@ html { font-size: 10px; height: 100%; }
 body, input, select, button, textarea { font-family: Arial, 'Microsoft YaHei', Verdana, sans-serif; line-height: 1.6; -webkit-tap-highlight-color: transparent; }
 
 body { margin: 0; padding: 0; background: #f8f8f8; color: #444; font-size: 1.4rem;user-select:none }
-
+body,
+html {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 a:hover, a:active { outline: 0; }
 
 a { color: #333; text-decoration: none; }
@@ -241,20 +249,7 @@ header.index ~ .header-margin { margin-top: 5rem; }
     margin: 0 10px;
     color:#FFF;
 }
-footer{
-    padding: 1.3rem 1rem;
-    background-color: @main-color;
-    text-align: center;
-    color:#FFF;
-    a{
-        &,&:visited{
-            color:#FFF;
-        }
-    }
-    li{
-        display: inline-block;
-    }
-}
+
 @backWidth :4rem;
 .back-top{
     position: fixed;
