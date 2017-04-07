@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
     <title>海沃商城</title>
-     <link rel="stylesheet" type="text/css" href="../build/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../build/css/style.min.css">
 </head>
 
 <body>
@@ -17,7 +17,9 @@
         </div>
         <div class="head">
             <div class="logo_img"><img src="../images/logo.png"></div>
-            <div class="seek"><input type="text" placeholder="请输入您要搜索的商品"><span>&#xe602;</span></div>
+            <div class="seek"><input type="text" placeholder="请输入您要搜索的商品">
+                <div class="icon"><span>&#xe602;</span></div>
+            </div>
         </div>
     </div>
     <div class="content">
@@ -121,12 +123,23 @@
     </footer>
 </body>
 <script src="../libs/jquery.min.js"></script>
+<script src="../libs/swiper-3.4.1.min.js"></script>
 <script src="../libs/underscore-min.js"></script>
 <script src="../build/js/build.min.js"></script>
 <script>
-    window.onload = ()=>{
-        console.log(window)
-        methodCover.capacity('测试',1000)
-    }
+    window.onload = function () {
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: '.swiper-pagination',
+        });
+    };
+    $(function () {
+        $(".footer").click(function () {
+            methodCover.capacity("你大爷的");
+            methodCover.go("./test.html",'goproject',[{name:'SB',age:100}]);
+        });
+    });
 </script>
+
 </html>

@@ -443,3 +443,33 @@ header.index ~ .header-margin { margin-top: 5rem; }
     padding: 1.5rem;
     background: rgba(0, 0, 0, 0.6);
     text-align: center; }
+    .alert-light-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  font-size: .14rem;
+  transition: all .4s;
+  transition-timing: ease-in;
+  opacity: 1;
+  .msg-box {
+    padding: 15px 30px 15px 30px;
+    position: absolute;
+    z-index: 2;
+    // top: 200px;
+    color: white;
+    border-radius: 5px;
+  }
+  .bg-box {
+    padding: 15px 30px 15px 30px;
+    position: absolute;
+    z-index: 1;
+    // top: 200px;
+    background: black;
+    color: black;
+    opacity: .6;
+    border-radius: 5px;
+  }
+}

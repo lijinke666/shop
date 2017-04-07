@@ -22,10 +22,10 @@ gulp.task("buildjs", () => {
   gulp.src([ pathBuild("src/utils/*.js"),pathBuild("src/modules/*.js")])
     .pipe(concat("build.min.js"))
     .pipe(babel())
-    .pipe(jsmin({
-      mangle: true,//类型：Boolean 默认：true 是否修改变量名
-      compress: true//类型：Boolean 默认：true 是否完全压缩
-    }))
+    // .pipe(jsmin({
+    //   mangle: true,//类型：Boolean 默认：true 是否修改变量名
+    //   compress: true//类型：Boolean 默认：true 是否完全压缩
+    // }))
     .pipe(gulp.dest(pathBuild("src/build/js")))
     .pipe(reload({stream:true}))
 })
