@@ -4,4 +4,8 @@
 
 (王南坪)[2017.4.6](修改配置，合并样式和公用JS)
 
+
 (王南坪)[2017.4.8](添加页面home.html（首页）、pdClassification.html（产品分类）、personalCenter.html（个人中心）、shoppingCart.html（购物车）、product.html（产品分类子类商品列表）)
+
+(李金珂)[2017.4.7](建立jinke分支)
+
