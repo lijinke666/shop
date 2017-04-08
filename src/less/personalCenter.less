@@ -123,24 +123,31 @@
     margin-top:10px;
     .list{
       li{
-        padding: 10px;
+        padding: 0 10px;
         display: flex;
         justify-content: space-between;
+        box-sizing: border-box;
+        border-bottom:1px solid #F8F8F8;
         div{
           font-size: 1.6rem;
+          height:50px;
+          line-height: 50px;
           i{
-            font-size: 2rem;
+            font-size: 2.3rem;
           }
         }
         .nav_function{
+          display: flex;
+          align-items: center;
           span{
             display: inline-block;
-            width:20px;
-            height:20px;
-            border-radius: 20px;
+            width:24px;
+            height:24px;
+            border-radius: 24px;
             text-align: center;
-            line-height: 20px;
+            line-height: 24px;
             background: red;
+            color: #FFF;
           }
         }
       }
@@ -190,10 +197,12 @@
         height:24px;
         line-height: 24px;
         text-align: center;
-        color:#FFF;
         background: red;
         font-size:.12rem;
         border-radius:24px;
+        span{
+          color:#FFF;
+        }
       }
     }
   }
