@@ -2,4 +2,6 @@
 
 (李金珂)[2017.4.6](增加gulp配置)
 
-(王南坪)[2017.4.6](修改配置，合并样式和公用JS)阿斯达
+(王南坪)[2017.4.6](修改配置，合并样式和公用JS)
+
+(王南坪)[2017.4.8](添加页面home.html（首页）、pdClassification.html（产品分类）、personalCenter.html（个人中心）、shoppingCart.html（购物车）、product.html（产品分类子类商品列表）)

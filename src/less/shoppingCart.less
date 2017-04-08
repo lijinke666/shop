@@ -1,0 +1,273 @@
+@import "./mixin.less";
+@import "./pulic.less";
+.sc_header{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  font-size:0;
+  background: #EAEEF1;
+  .fake_head{
+    font-family: 'iconfont', serif;
+      height:@header_height;
+    line-height: @header_height;
+    background: #000;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    .title{
+      font-family: 'iconfont', serif;
+      color:#FFF;
+      font-size:0.15rem;
+      span{
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+    .more{
+      padding-right:10px;
+      font-family: 'iconfont', serif;
+      color:#FFF;
+      font-size:0.15rem;
+    }
+  }
+  .head{
+    font-family: 'iconfont', serif;
+      height:@header_height;
+    line-height: @header_height;
+    background: #FFF;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-justify-content:  space-between;
+    justify-content: space-between;
+    padding: 0 10px;
+      .icon-block{
+      padding-right:20px;
+      font-family: 'iconfont', serif;
+      font-size: .18rem;
+      color:#918F8F;
+    }
+    .seek{
+      float:right;
+      width:80%;
+      border:1px solid #EDECEC;
+      height:30px;
+      overflow: hidden;
+      input{
+        float: left;
+        width:70%;
+        height:28px;
+        font-size: 1rem;
+        padding: 0 5px;
+        border: none;
+        outline: none;
+      }
+      .icon{
+        float: right;
+        display: block;
+        width:30px;
+        height:30px;
+        line-height: 30px;
+        text-align: center;
+        font-family: 'iconfont';
+        font-size: 1.4rem;
+        color:#0D8CD3;
+        border-left: 1px solid #EDECEC;
+      }
+    }
+  }
+}
+.sc_content{
+  position: absolute;
+  top: @header_height*2;
+  left: 0;
+  right: 0;
+  bottom: 48px;
+  font-size: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #EAEEF1;
+  padding:10px 0;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  .cart_list{
+    display:flex;
+    display:-webkit-flex;
+    -webkit-justify-content:  space-around;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFF;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom:1px solid #F6F7F6;
+    .check {
+      .check_btn {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 20px;
+        border: 1px solid #d7d7d7;
+        span {
+          font-family: 'iconfont';
+          font-size: 1rem;
+          font-weight:bold;
+          color:#FFF;
+        }
+      }
+      .check_color {
+        background: #F17F22;
+      }
+    }
+    .list_product{
+      display:flex;
+      display:-webkit-flex;
+      -webkit-justify-content:  space-around;
+      justify-content: space-around;
+      align-items: center;
+      .pd_img{
+        border:1px solid #F6F7F6;
+        img{
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .pd_massage{
+        width:140px;
+        padding-left:10px;
+        .pd_name{
+          font-size: 1rem;
+          color: #747172;
+        }
+        .pd_number{
+          display: flex;
+          display:-webkit-flex;
+          -webkit-justify-content: space-between;
+          justify-content: space-between;
+          -webkit-flex-direction: row;
+          flex-direction: row;
+          .chooser{
+            display: flex;
+            display:-webkit-flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+           box-sizing: border-box;
+            border-top: 1px solid #F2F2F2;
+            border-bottom: 1px solid #F2F2F2;
+            span{
+              display: inline-block;
+              width:24px;
+              height:24px;
+              line-height:24px;
+              text-align: center;
+              box-sizing: border-box;
+              border-left: 1px solid #F2F2F2;
+              border-right: 1px solid #F2F2F2;
+              font-size: 1px;
+              color:#EA4537;
+            }
+            input{
+              width:30px;
+              height:24px;
+              font-size: 1rem;
+              color:#716E6F;
+              text-align: center;
+              outline: none;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+    .pd_make{
+      width:50px;
+      height:64px;
+       .pd_price{
+         text-align: center;
+         padding-bottom: 5px;
+         font-size: 1rem;
+         color:#359BD9;
+       }
+      .del{
+        padding-top: 5px;
+        text-align: center;
+        font-family: 'iconfont';
+        font-size: 2rem;
+        color:#9E9C9C;
+      }
+    }
+  }
+}
+.sc_footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: @header_height;
+  display:flex;
+  display: -webkit-flex;
+  -webkit-justify-content:  space-between;
+  justify-content: space-between;
+  align-items: center;
+  .all_check{
+    padding-left: 10px;
+    display:flex;
+    display: -webkit-flex;
+    -webkit-justify-content:  space-between;
+    justify-content: space-between;
+    .check{
+      .check_btn {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        border: 1px solid #d7d7d7;
+        span {
+          position: absolute;
+          top:0;
+          left: 3px;
+          display: inline;
+          font-family: 'iconfont';
+          font-size: 1rem;
+          font-weight:bold;
+          color:#FFF;
+        }
+      }
+      .check_color {
+        background: #F17F22;
+      }
+    }
+    .check_name{
+      display: inline-block;
+      width:40px;
+      padding-left: 5px;
+      font-size: 1rem;
+      color: #9E9C9C;
+    }
+  }
+  .close{
+    display:flex;
+    display: -webkit-flex;
+    -webkit-justify-content:  space-between;
+    justify-content: space-between;
+    align-items: center;
+    .price{
+      font-size: 1rem;
+      color:#EB574A;
+      padding-right: 10px;
+    }
+    .btn_acc{
+      width:70px;
+      height:@header_height;
+      line-height: @header_height;
+      color:#FFF;
+      background: #0086D1;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+  }
+}

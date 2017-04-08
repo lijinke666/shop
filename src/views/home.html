@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="home_header">
         <div class="fake_head">
             <div class="title"><span>&#xe667;</span>配件商城</div>
             <div class="more">&#xe60e;</div>
@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="home_content">
         <div class="carousel">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="hot_nav">
-            <ul>
+            <ul class="none">
                 <li>
                     <span>&#xe611;</span>
                     <p>产品类1</p>
@@ -84,21 +84,21 @@
             </ul>
         </div>
     </div>
-    <footer class="footer">
+    <footer class="home_footer">
         <ul class="none list">
-            <li>
+            <li onclick="methodCover.go('./home.html')">
                 <div>
                     <span>&#xe638;</span>
                     <p>首页</p>
                 </div>
             </li>
-            <li>
+            <li onclick="methodCover.go('./pdClassification.html')">
                 <div>
                     <span>&#xe601;</span>
                     <p>产品</p>
                 </div>
             </li>
-            <li class="shopping_cart">
+            <li class="shopping_cart" onclick="methodCover.go('./shoppingCart.html')">
                 <div>
                     <span>&#xe6f0;</span>
                     <p>购物车</p>
@@ -135,10 +135,10 @@
         });
     };
     $(function () {
-        $(".footer").click(function () {
-            methodCover.capacity("你大爷的");
-            methodCover.go("./test.html",'goproject',[{name:'SB',age:100}]);
-        });
+        // $(".footer").click(function () {
+        //     methodCover.capacity("你大爷的");
+        //     // methodCover.go("./test.html",'goproject',[{name:'SB',age:100}]);
+        // });
     });
 </script>
 
