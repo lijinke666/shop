@@ -121,6 +121,16 @@
             </li>
         </ul>
     </footer>
+    <div id="test">
+        <div class="hw-header">
+            <h2 class="title">评价订单</h2>
+        </div>
+        <div class="hw-content">
+            <div style="height:300px">
+                sdf
+            </div>
+        </div>
+    </div>
 </body>
 <script src="../libs/jquery.min.js"></script>
 <script src="../libs/swiper-3.4.1.min.js"></script>
@@ -133,13 +143,11 @@
             loop: true,
             pagination: '.swiper-pagination',
         });
-    };
-    $(function () {
-        $(".footer").click(function () {
-            methodCover.capacity("你大爷的");
-            methodCover.go("./test.html",'goproject',[{name:'SB',age:100}]);
+        $('#test').popup({
+            height:"40rem"
         });
-    });
+
+    };
 </script>
 
 </html>
