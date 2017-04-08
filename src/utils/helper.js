@@ -77,7 +77,7 @@
 	function init($d){
         var body = $('body')
         var dom = $(`
-        <div class="hw-modal"><div class="hw-wrap"><div class="hw-close"><i></i></div></div></div>`)
+        <div class="hw-modal"><div class="hw-wrap"><div class="hw-close"><i class="icons icon-chacha"></i></div></div></div>`)
         body.append(dom)
 		
 	    dom.find('.hw-close').on('click', ()=>{
