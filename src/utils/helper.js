@@ -50,3 +50,46 @@
         }
     };
 })(window)
+
+;(function($) {
+    $.fn.popup = function(options){
+        var defaults = {
+            width:"90%"
+        }
+        var options = $.extend(defaults,options);
+
+        var $this = $(this)
+        const {width,height} = options;
+	    var $dom,$wrap;
+        if( ! $this.hasClass('init') ){
+            $dom	= init( $this );
+            $wrap	= $dom.find('.hw-wrap');
+        }else{
+            $wrap	= $this.parent();
+            $dom	= $wrap.parent();
+        }
+        if( options &&width && height ){
+            $wrap.css({width, height});
+        }
+        $dom.fadeIn('fast');
+	    $this.css('display', 'block');
+    }
+	function init($d){
+        var body = $('body')
+        var dom = $(`
+        <div class="hw-modal"><div class="hw-wrap"><div class="hw-close"><i></i></div></div></div>`)
+        body.append(dom)
+		
+	    dom.find('.hw-close').on('click', ()=>{
+			dom.fadeOut('fast');
+		});
+		
+		dom.find('.hw-wrap').on('click', (e)=>{
+			e.stopPropagation();
+		}).append( $d );
+		
+		$d.addClass('init');
+		
+		return dom;
+	}
+})(jQuery);
