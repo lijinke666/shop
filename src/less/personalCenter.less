@@ -20,6 +20,9 @@
       font-family: 'iconfont';
       color:#FFF;
       font-size:1.4rem;
+      i{
+        font-size:1.4rem;
+      }
     }
     .more{
       padding-right:10px;
@@ -65,7 +68,7 @@
       }
     }
     .user_name{
-      font-size: .14rem;
+      font-size: 1.4rem;
       text-align: center;
       color:#FFF;
       padding: 5px 0;
@@ -75,11 +78,11 @@
     }
     .post{
       margin: 0 auto;
+      text-align: center;
       span{
-        display: block;
-        font-size: .14rem;
+        display:inline-block;
+        font-size: 1.4rem;
         padding: 0 20px;
-        line-height: 30px;
         color: #FFF;
         text-align: center;
         border-radius: 30px;
@@ -88,17 +91,57 @@
     }
   }
   .wrap{
-    padding: 10px 0;
+    padding: 10px 10px;
     display: flex;
     display: -webkit-flex;
     justify-content: space-between;
+    align-items: center;
     .total{
       font-family: 'iconfont';
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color:#AD9F9F;
+      i{
+        font-size: 2rem;
+      }
       span{
-        font-size: 1.6rem;
+        margin: 0 10px;
+        font-size: 2.4rem;
         color:#127DC5;
+      }
+    }
+    .pe_btn{
+      span{
+        display: inline-block;
+        padding: 5px 14px;
+        font-size: 1.4rem;
+        margin-left:10px;
+        border-radius:10px;
+      }
+    }
+  }
+  .pe_nav{
+    margin-top:10px;
+    .list{
+      li{
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        div{
+          font-size: 1.6rem;
+          i{
+            font-size: 2rem;
+          }
+        }
+        .nav_function{
+          span{
+            display: inline-block;
+            width:20px;
+            height:20px;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 20px;
+          }
+        }
       }
     }
   }
