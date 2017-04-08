@@ -1,6 +1,6 @@
 @import "./mixin.less";
 @import "./pulic.less";
-.header{
+.home_header{
   position: absolute;
   top:0;
   left:0;
@@ -12,17 +12,16 @@
     background: #000;
     display: flex;
     justify-content: space-between;
+      padding: 0 10px;
     .title{
       font-family: 'iconfont';
       color:#FFF;
       font-size: 1.4rem;
-      span{
-        display: inline-block;
-        padding: 0 10px;
+       i{
+        font-size:1.4rem;
       }
     }
     .more{
-      padding-right:10px;
       font-family: 'iconfont';
       color:#FFF;
       font-size: 1.4rem;
@@ -74,7 +73,7 @@
     }
   }
 }
-.content{
+.home_content{
   position: absolute;
   top: @header_height*2;
   left: 0;
@@ -127,7 +126,7 @@
      }
   }
 }
-.footer{
+.home_footer{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -148,7 +147,7 @@
       div{
         text-align:center;
         margin: 0 auto;
-        span{
+        i{
           font-family: 'iconfont';
           color:#A09F9F;
           font-size:  1.6rem;
