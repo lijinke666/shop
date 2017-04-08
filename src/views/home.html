@@ -101,21 +101,18 @@
 <script src="../libs/underscore-min.js"></script>
 <script src="../build/js/build.min.js"></script>
 <script>
-    window.onload = function () {
+    $(function () {
         var mySwiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
             loop: true,
             pagination: '.swiper-pagination',
         });
-
-    };
-    $(function () {
-
         $('#test').popup({
             height:"40rem"
         });
 
-    }
+    });
+
 </script>
 
 </html>
