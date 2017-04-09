@@ -19,7 +19,7 @@ const pathBuild = (p) => {
 //压缩js
 gulp.task("buildjs", () => {
   console.log('================[build js start]===================')
-  gulp.src([ pathBuild("src/utils/*.js"),pathBuild("src/modules/*.js")])
+  gulp.src([ pathBuild("src/utils/*.js")])
     .pipe(concat("build.min.js"))
     .pipe(babel())
     // .pipe(jsmin({
