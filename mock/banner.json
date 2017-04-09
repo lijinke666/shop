@@ -1,0 +1,12 @@
+[{
+  "src":"../images/banner1_02.jpg",
+  "target":"#"
+},{
+  "src":"../images/banner2_02.jpg",
+  "target":"#"
+},
+{
+    "src":"../images/banner3_02.jpg",
+    "target":"#"
+}
+]

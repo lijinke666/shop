@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <div class="pd_header">
+    <div class="sc_header">
         <div class="fake_head">
-            <div class="title"><i class="icons icon-chacha"></i>产品分类</div>
-            <div class="more"><i class="icons icon-more1170511easyiconnet"></i></div>
+            <div class="title"><i class="icons icon-chacha"></i>收货地址管理</div>
+            <div class="more"><i class="icons icon-search"></i></div>
         </div>
         <div class="head">
             <div class="icon-block" onclick="methodCover.back()"><i class="icons icon-taobaozhongchou4qizuoyoujiantou"></i></div>
@@ -23,11 +23,26 @@
             </div>
         </div>
     </div>
-    <div class="pd_content">
-        <!--产品分类template-->
+    <div class="sc_content">
+            <!--<div class="cart_list">
+                    <span class="icons icon-ditu"></span>
+            </div>-->
+            <ul class="none user-address-item ">
+                <li class="cart_list">
+                    <div class="address-icons">
+                        <span><i class="icons icon-ditu"></i></span>   
+                    </div>
+                    <div class="box-flex-1">
+                        <p></p>
+                    </div>
+                    <div class="address-select">
+                        
+                    </div>
+                </li>
+            </ul>
     </div>
-    <footer class="pd_footer">
-       <ul class="none list">
+    <footer class="home_footer">
+        <ul class="none list">
             <li onclick="methodCover.go('./home.html')">
                 <div>
                     <i class="icons icon-fangwuicon"></i>
@@ -68,19 +83,5 @@
 <script src="../libs/swiper-3.4.1.min.js"></script>
 <script src="../libs/underscore-min.js"></script>
 <script src="../build/js/build.min.js"></script>
-<script src="../modules/pdClassification.js"></script>
-    <script type="text/template" id="product_category">
-        <ul class="none">
-<% _.each(categories,function(category){ %>
-        <li onclick="methodCover.go('./product.html')">
-            <div class="pd_list">
-                <div class="pdClass_img">
-                    <img src="../images/banner3_02.jpg">
-                </div>
-                <p><%- category.bigname %></p>
-            </div>
-        </li>
-<% }) %>
-    </ul>
-</script>
+
 </html>

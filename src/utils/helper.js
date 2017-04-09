@@ -93,3 +93,38 @@
 		return dom;
 	}
 })(jQuery);
+
+//数据请求
+;(function($){
+    window.httpFetch = {
+        host:"192.168.199.237",
+        //数据请求之前添加loading效果
+        getJsonp(options){
+            const {url,data,jsonp,callback} = options
+            $.ajax({
+                url,
+                type:"get",
+                async:false,
+                data:data || {},
+                dataType:"jsonp",
+                jsonp:jsonp || "callback",
+                timeout:4000,
+                cache:true,
+                success:function(res){
+                    if(res && res.status == 200){
+                        callback(res)
+                    }
+                },
+                error:function(e){
+                    methodCover.capacity('服务器开小差了~')
+                    console.log('get json error',e)
+                },
+                complete:function(req,status){
+                    if(status == "timeout"){
+                           methodCover.capacity('请求超时')
+                    }
+                }
+            })
+        }
+    }
+})(jQuery);

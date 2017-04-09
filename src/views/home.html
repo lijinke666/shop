@@ -17,35 +17,18 @@
         </div>
         <div class="head">
             <div class="logo_img"><img src="../images/logo.png"></div>
-            <div class="seek"><input type="text" placeholder="请输入您要搜索的商品">
-                <div class="icon"><i class="icons icon-search"></i></div>
+            <div class="seek">
+                <input type="text" placeholder="请输入您要搜索的商品">
+                <div class="icon header-search"><i class="icons icon-search"></i></div>
             </div>
         </div>
     </div>
     <div class="home_content">
         <div class="carousel">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="../images/banner1_02.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../images/banner2_02.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../images/banner3_02.jpg" alt="" />
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
+            <!--轮播图 template -->
         </div>
-        <div class="hot_nav">
-            <ul class="none">
-                <li>
-                    <span class="icons icon-liwu"></span>
-                    <p>产品类1</p>
-                </li>
-            </ul>
+        <div class="hot_nav category-content">
+            <!-- 产品分类template  -->
         </div>
     </div>
     <footer class="home_footer">
@@ -68,7 +51,7 @@
                     <p>购物车</p>
                 </div>
                 <div class="number_cart">
-                    +3
+                    +0
                 </div>
             </li>
             <li>
@@ -77,7 +60,7 @@
                     <p>客服</p>
                 </div>
             </li>
-            <li>
+            <li onclick="methodCover.go('./personalCenter.html')">
                 <div>
                     <i class="icons icon-gerenzhongxin"></i>
                     <p>我的</p>
@@ -100,19 +83,30 @@
 <script src="../libs/swiper-3.4.1.min.js"></script>
 <script src="../libs/underscore-min.js"></script>
 <script src="../build/js/build.min.js"></script>
-<script>
-    $(function () {
-        var mySwiper = new Swiper('.swiper-container', {
-            direction: 'horizontal',
-            loop: true,
-            pagination: '.swiper-pagination',
-        });
-        $('#test').popup({
-            height:"40rem"
-        });
-
-    });
-
+<script src="../modules/home.js"></script>
+<script type="text/template" id="swiper">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <%  _.each(banners,function(item){ %>
+                <div class="swiper-slide">
+                    <img src="<%- item.src %>" alt="加载中" />
+                </div>
+                <% }) %>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</script>
+<script type="text/template" id="home_category">
+    <ul class="none">
+        <%  _.each(categorys,function(category,index){ %>
+            <li data-id="<%= category.bigclassid %>" class="category-item" onClick="methodCover.go('./product.html')">
+                <span class="icons <%- icons[index+1]%>"></span>
+                <p>
+                    <%- category.bigname %>
+                </p>
+            </li>
+            <% }); %>
+    </ul>
 </script>
 
 </html>
